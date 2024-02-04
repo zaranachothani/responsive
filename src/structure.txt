@@ -1,0 +1,224 @@
+// import logo from './logo.svg';
+import './App.css';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import Carousel from 'react-bootstrap/Carousel';
+// import { useState } from 'react';
+// import ExampleCarouselImage from 'components/ExampleCarouselImage';
+import React from 'react';
+import banner1 from './image/banner1.jpeg'
+import banner2 from './image/banner2.jpeg'
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { GrBriefcase } from "react-icons/gr";
+import { FaSearch } from "react-icons/fa";
+import { Row,Col,Container } from 'react-bootstrap';
+
+const option={
+    responsive:{
+        0:{
+            items:1,
+            dots:false,
+            nav:false,
+        },
+        600:{
+            items:1,
+            dots:false,
+            nav:false,
+        },
+        1000:{
+            items:1,
+            dots:false,
+            nav:false,
+        }
+    }
+}
+
+function App() {
+
+    // const [show, setShow] = useState(false);
+
+    // const handleClose = () => setShow(false);
+    // const handleShow = () => setShow(true);  
+
+  return (
+ 
+    <section>
+
+    {/*********************************************************  
+                          header
+     ************************************************************  */}
+     <header>
+        <div className='nav_menu'>
+            <div className='-'>
+                <Row className='d-flex align-items-center justify-content-between'>
+                        <div className='col-lg-2 logo'>
+                            <div className='logo'>
+                                <a href='#'>
+                                    <img src={require(`./image/logo.png`)}></img>
+                                </a>
+                            </div>
+                        </div>
+                        <div className='col-lg-10'>
+                            <nav className='dex_menu d-flex align-items-center'>
+                                <ul className='nav_scroll main_menu d-flex'>
+                                    <li><a href='#'>HOME</a></li>
+                                    <li><a href='#'>ABOUT US+</a></li>
+                                    <li><a href='#'>PAGES+</a></li>
+                                    <li><a href='#'>SERVICES+</a></li>
+                                    <li><a href='#'>BLOG+</a></li>
+                                    <li><a href='#'>CONTACT US+</a></li>
+                                    <li><a href='#'>SERVICES+</a></li>
+                                </ul>
+                                <div className='search_box search_box_btn d-flex'>
+                                    <div className='slider_bage'>
+                                        <i><GrBriefcase></GrBriefcase></i><span>0</span>
+                                    </div>
+                                    <div className='search'>
+                                        <i><FaSearch></FaSearch></i>
+                                    </div>
+                                </div>
+                            </nav>
+                            <div className='header_button'>
+                                <a href='#'><span>Get a Quote</span></a>
+                            </div>
+                            {/* <div className='slider_top'>
+                            <Button variant="primary" className="d-lg-none" onClick={handleShow}>
+                                Launch
+                            </Button>
+
+                            <Alert variant="info" className="d-none d-lg-block">
+                                Resize your browser to show the responsive offcanvas toggle.
+                            </Alert>
+
+                            <Offcanvas show={show} onHide={handleClose} responsive="lg">
+                                <Offcanvas.Header closeButton>
+                                <Offcanvas.Title>Responsive offcanvas</Offcanvas.Title>
+                                </Offcanvas.Header>
+                                <Offcanvas.Body>
+                                <p className="mb-0">
+                                    This is content within an <code>.offcanvas-lg</code>.
+                                </p>
+                                </Offcanvas.Body>
+                            </Offcanvas>
+                            </div> */}
+                        </div>
+                </Row>
+            </div>
+        </div>
+     </header>
+
+
+      {/* **********************************************  
+                        Slider
+      ***************************************************/}
+
+<OwlCarousel className='owl-theme' loop margin={10} nav>
+    <div class='item'>
+        <img src={require(`./image/banner1.jpeg`)}></img>
+    </div>
+    <div class='item'>
+        <img src={require(`./image/banner1.jpeg`)}></img>
+    </div>
+</OwlCarousel>;
+    
+
+    {/* ************************************************88
+                    Features
+    ******************************************************/}
+
+    
+
+{/* ***************************************************
+                    About area
+*******************************************************/}
+
+    
+        
+            <Row>
+                 <div className='about_area spacer'>
+                    <Col className='col-lg-6 col-md-6 col-sm-12'>
+                        <div className='about_thumb_box'>
+                            <div className='about_thumb'>
+                                <img src={require(`./image/about.jpeg`)}></img>
+                            </div>
+                            <div className='about_content'>
+                                <div className='about_thumb'>
+                                    <img src={require(`./image/f2.png`)}></img>
+                                </div>
+                                <div className='about_title'>
+                                    <h3><span>10</span>Years Of</h3>
+                                    <h3>Experinces</h3>
+                                </div>
+                            </div>
+                            <div className='about_shape'>
+                                <div className='about_thumb'>
+                                    <img src={require(`./image/shape.png`)}></img>
+                                </div>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col className='col-lg-6 col-md-6 col-sm-12'>
+                        <div className='dreamit_section_title'>
+                            <h4>ABOUT US</h4>
+                            <h1>Simple Minimal for Modern</h1>
+                            <h1>home <span>Exterior design</span></h1>
+                        </div>
+                        <div className='shape_dex'>
+                            <div className='shape_title'>
+                                <h1>DEX</h1>
+                            </div>
+                        </div>
+                        <p className='about_text'>
+                            Competently visualize error-free metrics before client-focused bandwidth. Interactively re-engineer intuitive core competencies via 24/365 services. Dynamically underwhelm inexpensive
+                        </p>
+                        <Row>
+                            <div className='col-lg-6'>
+                                <div className='about_icon_box'>
+                                    <div className='icon'>
+                                        <span></span>
+                                        <p>Retail Residental Projects</p>
+                                    </div>
+                                    <div className='icon'>
+                                        <span></span>
+                                        <p>Retail Residental Projects</p>
+                                    </div>
+                                    <div className='icon'>
+                                        <span></span>
+                                        <p>Retail Residental Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <Col className='col-lg-6'>
+                                <div className='about_icon_box'>
+                                    <div className='icon'>
+                                        <span></span>
+                                        <p>Retail Residental Projects</p>
+                                    </div>
+                                    <div className='icon'>
+                                        <span></span>
+                                        <p>Retail Residental Projects</p>
+                                    </div>
+                                    <div className='icon'>
+                                        <span></span>
+                                        <p>Retail Residental Projects</p>
+                                    </div>
+                                </div>
+                            </Col>
+                        </Row>
+                        <div className='about_button'>
+                            <a href='#'>Read More</a>
+                        </div>
+                    </Col>
+                </div>
+            </Row>
+    
+
+
+    </section>
+  );
+}
+
+export default App;
